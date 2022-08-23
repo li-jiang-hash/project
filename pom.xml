@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.aaa</groupId>
+  <artifactId>project</artifactId>
+  <version>1.0.22.08.23</version>
+  <packaging>war</packaging>
+
+  <name>project Maven Webapp</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <!--依赖信息-->
+    <org.thymeleaf>3.0.11.RELEASE</org.thymeleaf>
+    <aaa.javax.servlet>3.1.0</aaa.javax.servlet>
+    <junit.junit>4.12</junit.junit>
+    <mysql.mysql-connector-java>5.1.37</mysql.mysql-connector-java>
+    <com.alibaba.druid>1.2.8</com.alibaba.druid>
+    <commons-dbutils.commons-dbutils>1.6</commons-dbutils.commons-dbutils>
+    <javax.servlet.servlet-api>3.1.0</javax.servlet.servlet-api>
+    <ch.qos.logback.logback-classic>1.2.3</ch.qos.logback.logback-classic>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+
+
+  <dependency>
+    <groupId>org.thymeleaf</groupId>
+    <artifactId>thymeleaf</artifactId>
+    <version>${org.thymeleaf}</version>
+  </dependency>
+  <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>${aaa.javax.servlet}</version>
+    <scope>provided</scope>
+  </dependency>
+
+  <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>${mysql.mysql-connector-java}</version>
+  </dependency>
+  <dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>druid</artifactId>
+    <version>${com.alibaba.druid}</version>
+  </dependency>
+  <dependency>
+    <groupId>commons-dbutils</groupId>
+    <artifactId>commons-dbutils</artifactId>
+    <version>${commons-dbutils.commons-dbutils}</version>
+  </dependency>
+  <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>${javax.servlet.servlet-api}</version>
+    <scope>provided</scope>
+  </dependency>
+  <dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>${ch.qos.logback.logback-classic}</version>
+    <scope>test</scope>
+  </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>project</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+          <port>8007</port><!--启动端口默认：8080-->
+          <path>/project</path><!--项目的站点名，即对外访问路径-->
+          <uriEncoding>UTF-8</uriEncoding><!--字符集编码默认：IS0-8859-1-->
+          <server>tomcat7</server><!--服务器名称-->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
