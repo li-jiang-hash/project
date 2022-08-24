@@ -9,6 +9,7 @@ package com.aaa.project.util;
 public class ImperialCourtConst {
 
     public static final String LOGIN_FAILED_MESSAGE = "账号、密码错误，请重新登录！！！";
-    public static final String ACCESS_DENIED_MESSAGE = "访问数据涉及隐私，请重新登录！！！";
+    public static final String LOGIN_NULL_MESSAGE = "账号或密码不能为空！！！";
+    public static final String ACCESS_DENIED_MESSAGE = "系统检测到您尚未登录，请重新登录！！！";
     public static final String LOGIN_EMP_ATTR_NAME = "loginInfo";
 }

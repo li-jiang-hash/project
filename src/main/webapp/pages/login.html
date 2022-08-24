@@ -71,9 +71,10 @@
     <p style="color: red;font-weight: bold" th:text="${systemMessage}"></p>
 
 
-    <input type="username" name="loginAccount" placeholder="username"/>
-    <input type="password" name="loginPassword" placeholder="password">
-    <input type="submit" value="登录" />
+    <input type="username" id="u" name="loginAccount" placeholder="username"/>
+    <input type="password" id="p" name="loginPassword" placeholder="password">
+    <input type="submit" value="登录" onclick="return isNull()" />
 </form>
+
 </body>
 </html>

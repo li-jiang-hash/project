@@ -1,5 +1,6 @@
 com\aaa\project\entity\User.class
 com\aaa\project\servlet\base\ModelBaseServlet.class
+com\aaa\project\filter\LoginFiter.class
 com\aaa\project\servlet\module\AuthServlet.class
 com\aaa\project\servlet\module\AddServlet.class
 com\aaa\project\util\StringUtils.class

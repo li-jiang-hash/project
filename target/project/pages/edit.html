@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}"/>
+</head>
+<body>
+<form th:action="@{update.do}" method="post">
+    <table style="font-size: 30px; width: 50vw;margin: 100px auto" border="1px"
+           cellspacing="0">
+        <tbody th:object="${good}">
+        <input type="hidden" name="gid" th:value="*{goodId}">
+        <tr>
+            <th>名称:</th>
+            <td><input type="text" name="gname" th:value="*{goodName}"></td>
+        </tr>
+        <tr>
+            <th>单价:</th>
+            <td><input type="text" name="gprice" th:value="*{goodPrice}"></td>
+        </tr>
+        <tr>
+            <th style="width: 50vw">口号:</th>
+            <td><input type="text" name="gslogan" th:value="*{goodSlogan}"></td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input class="layui-btn layui-btn-normal" type="submit">
+            </th>
+        </tr>
+        </tbody>
+    </table>
+</form>
+</body>
+</html>

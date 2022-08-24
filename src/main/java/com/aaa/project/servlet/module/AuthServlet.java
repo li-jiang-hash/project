@@ -6,6 +6,7 @@ import com.aaa.project.service.api.UserService;
 import com.aaa.project.service.impl.UserServiceImpl;
 import com.aaa.project.servlet.base.ModelBaseServlet;
 import com.aaa.project.util.ImperialCourtConst;
+import com.aaa.project.util.StringUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,6 +30,15 @@ public class AuthServlet extends ModelBaseServlet {
         try{
             String loginAccount =request.getParameter("loginAccount");
             String loginPassword =request.getParameter("loginPassword");
+            if (StringUtils.isEmpty(loginAccount) || StringUtils.isEmpty(loginPassword)){
+                request.setAttribute("message", ImperialCourtConst.LOGIN_NULL_MESSAGE);
+                processTemplate("login",request,response);
+                return;
+            }
+
+
+
+
             User user = userService.getUidByLoginAccount(loginAccount,loginPassword);
             HttpSession session = request.getSession();
             session.setAttribute(ImperialCourtConst.LOGIN_EMP_ATTR_NAME, user);
@@ -44,7 +54,6 @@ public class AuthServlet extends ModelBaseServlet {
             }else {
                 throw new RuntimeException(e);
             }
-
         }
     }
 
