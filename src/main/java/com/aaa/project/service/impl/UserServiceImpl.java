@@ -7,6 +7,7 @@ import com.aaa.project.exception.LoginFailedException;
 import com.aaa.project.service.api.UserService;
 import com.aaa.project.util.ImperialCourtConst;
 import com.aaa.project.util.MD5Util;
+import com.aaa.project.util.MD5UtilTest;
 
 /**
  * @Author:江Sir
@@ -19,13 +20,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUidByLoginAccount(String loginAccount, String loginPassword) {
 
+
         String encodedLoginPassword = MD5Util.encode(loginPassword);
+//        String encodedLoginPassword = MD5UtilTest.encode(loginPassword).toUpperCase();
+        System.out.println(encodedLoginPassword);
         User user = userDao.selectUidByLoginAccount(loginAccount,encodedLoginPassword);
         if(user !=null){
             System.out.println("登录成功");
             return user;
         }else {
-            System.out.println("出错啦~~~");
+            System.out.println("登陆失败");
             throw new LoginFailedException(ImperialCourtConst.LOGIN_FAILED_MESSAGE);
         }
     }

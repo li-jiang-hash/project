@@ -1,6 +1,7 @@
 C:\Users\Administrator\Desktop\小组\一期项目\AAAFirstProject\project\src\main\java\com\aaa\project\servlet\base\ModelBaseServlet.java
 C:\Users\Administrator\Desktop\小组\一期项目\AAAFirstProject\project\src\main\java\com\aaa\project\servlet\module\UpdadateServlet.java
 C:\Users\Administrator\Desktop\小组\一期项目\AAAFirstProject\project\src\main\java\com\aaa\project\servlet\module\EditServlet.java
+C:\Users\Administrator\Desktop\小组\一期项目\AAAFirstProject\project\src\main\java\com\aaa\project\util\MD5.java
 C:\Users\Administrator\Desktop\小组\一期项目\AAAFirstProject\project\src\main\java\com\aaa\project\filter\BrandFilter.java
 C:\Users\Administrator\Desktop\小组\一期项目\AAAFirstProject\project\src\main\java\com\aaa\project\servlet\base\ViewBaseServlet.java
 C:\Users\Administrator\Desktop\小组\一期项目\AAAFirstProject\project\src\main\java\com\aaa\project\service\api\GoodsService.java
@@ -25,3 +26,4 @@ C:\Users\Administrator\Desktop\小组\一期项目\AAAFirstProject\project\src\m
 C:\Users\Administrator\Desktop\小组\一期项目\AAAFirstProject\project\src\main\java\com\aaa\project\exception\LoginFailedException.java
 C:\Users\Administrator\Desktop\小组\一期项目\AAAFirstProject\project\src\main\java\com\aaa\project\servlet\module\AddServlet.java
 C:\Users\Administrator\Desktop\小组\一期项目\AAAFirstProject\project\src\main\java\com\aaa\project\dao\BaseDao.java
+C:\Users\Administrator\Desktop\小组\一期项目\AAAFirstProject\project\src\main\java\com\aaa\project\util\MD5Utils.java
